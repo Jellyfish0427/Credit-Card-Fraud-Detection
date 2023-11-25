@@ -25,7 +25,7 @@ train_df['支付型態'].fillna(train_df['支付型態'].mode()[0], inplace=True
 ```
 
 **- Remove rows with missing values**
--  消費程式
+-  消費城市
 ```js
 train_df.dropna(subset=['消費城市'], inplace=True)
 ```
@@ -38,7 +38,7 @@ train_df['消費地幣別'] = np.where(train_df['消費地幣別'] == 70, 1, 0)
 test_df['消費地幣別'] = np.where(test_df['消費地幣別'] == 70, 1, 0)
 ```
 
-### 4. Process 授權時間
+### 4. Process Authorization Time (授權時間)
 - Extracting only the **hours** and storing them in a new column named '授權時間-小時'.   
 - Removes the original '授權時間' column.
 ```js
@@ -55,8 +55,24 @@ train_df.drop(columns=['授權時間'],inplace=True)
 test_df.drop(columns=['授權時間'],inplace=True)
 ```
 
-### 5. Process
+### 5. Count repeated values as new features.
+- Card Transaction Count (卡片交易次數)   
+Count the number of transactions associated with each unique card number. 
 
+- Store Transaction Count (特店交易次數)
 
+- Customer Transaction Count (顧客交易次數
 
+- 卡片一日交易次數
+
+- 一日購買相同商品次數
+
+- (卡片)購買商品次數
+
+*這個部分我應該要把train和test一起統計的:(  
+
+### 6. Drop features
+- 交易序號
+- 狀態碼
+- 授權日期
 
