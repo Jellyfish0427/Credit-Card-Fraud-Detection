@@ -61,17 +61,17 @@ test_df.drop(columns=['授權時間'],inplace=True)
 ![image](https://github.com/Jellyfish0427/Credit-Card-Fraud-Detection/blob/main/image/重複交易卡號.png)
 Count the number of transactions associated with each unique card number. 
 
-- **Store Transaction Count (特店交易次數)**
+- **Store Transaction Count (特店交易次數)**  
 
-- **Customer Transaction Count (顧客交易次數)**
+- **Customer Transaction Count (顧客交易次數)**  
 ![image](https://github.com/Jellyfish0427/Credit-Card-Fraud-Detection/blob/main/image/重複交易顧客.png)  
 
-- **卡片一日交易次數**
+- **卡片一日交易次數**  
 ![image](https://github.com/Jellyfish0427/Credit-Card-Fraud-Detection/blob/main/image/卡片一日交易次數.png)  
 
 - **一日購買相同商品次數**
 
-- **(卡片)購買商品次數**
+- **(卡片)購買商品次數**  
 ![image](https://github.com/Jellyfish0427/Credit-Card-Fraud-Detection/blob/main/image/卡片購買商品次數.png)   
 Calculated the count of purchases made by each card.  
 *這個部分我應該要把 training 和 testing dara一起統計的:(  
